@@ -1,0 +1,47 @@
+/* Fonts */
+/* Heading --font-family: 'Abril Fatface', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* Body -- "Poppins", sans-serif*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+/* Website Theme*/
+:root {
+    /* ------------------------COLOR SCHEMES--------------------- */
+
+    /* LIGHT-MODE */
+    --base: #eee7ff;
+    --primary-1: rgb(73, 52, 125);
+    --primary-2: #5603ad;
+    --primary-3: #8d6edd;
+    --primary-4: #b8a4e9;
+    --primary-5: #f0eaff;
+    --secondary-1: #c2f8cb;
+    --secondary-2: #b5edca;
+    --secondary-3: #feffd6;
+    --light-selection: #590696;
+
+    /* LIGHT-MODE ACCENT */
+    --light-accent-1: #ffa500;
+    --light-accent-2: #8306ea;
+
+    /*LIGHT Transparent*/
+    --light-transparent-1: rgb(255, 255, 255);
+
+    /*LIGHT-MODE-TYPOGRAPGHY*/
+    --text-col-1: #8768a7;
+    --text-col-2: #5603ad;
+    --text-col-3: rgb(111, 111, 111);
+    --light-heading-1: #3c096c;
+
+    /* DARK-MODE */
+    --dark-base: #10002b;
+    --dark-primary-1: #541690;
+    --dark-primary-2: #3c096c;
+    --dark-secondary-1: #e0aaff;
+    --dark-secondary-2: #9d4edd;
+
+    /*DARK-MODE-TYPOGRAPGHY*/
+
+    /* ------------------------ OTHER --------------------- */
+    --section-padding: 5rem;
+}

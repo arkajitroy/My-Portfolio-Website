@@ -1,0 +1,315 @@
+*,
+*::before,
+*::after {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--base);
+}
+
+::selection {
+    background-color: var(--light-selection);
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/*---------------------Reusable CSS Code---------------------*/
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    padding: 0 2rem;
+    margin: auto;
+}
+
+header .logo {
+    height: 120px;
+    line-height: 120px;
+}
+
+header .scrolled .logo {
+    height: 80px;
+    line-height: 80px;
+}
+
+.logo {
+    margin-right: 1.5rem;
+    height: 120px;
+    line-height: 120px;
+    font-family: 'Abril Fatface', cursive;
+    color: var(--primary-2);
+    letter-spacing: 2px;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.logo span {
+    font-family: 'Abril Fatface', cursive;
+    color: var(--primary-1);
+}
+
+/*---------------------NAVBAR STYLING---------------------*/
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+header.scrolled {
+    background-color: var(--light-transparent-1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
+    backdrop-filter: blur(15px);
+}
+
+nav.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.links {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: var(--text-col-1);
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--primary-1);
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #3c096c;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    opacity: 0.3;
+}
+
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    background-color: #ffbf47;
+    color: black;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.179) 0px 3px 8px;
+    transition: 0.5s;
+}
+
+.toggle-btn:hover {
+    filter: brightness(90%);
+}
+
+/*--------------------- Upper Section of the Body ---------------------*/
+
+.showcase-area {
+    padding: var(--section-padding) 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.showcase-area .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc(100vh - 120px);
+    max-height: 600px;
+    align-items: center;
+}
+
+.sub-heading {
+    color: var(--text-col-2);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    border-left: 3px solid var(--light-accent-1);
+    padding: 0.2rem 0.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+}
+
+.heading {
+    color: var(--light-heading-1);
+    font-size: 3rem;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.text {
+    color: var(--text-col-3);
+    font-size: 1rem;
+    margin: 2rem 0;
+}
+
+.showcase-area .sub-heading {
+    margin-bottom: 0.6rem;
+}
+
+.showcase-area .heading {
+    font-size: 3.5rem;
+}
+
+/* -----------Buttons------------ */
+.cta {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.cta .btn {
+    margin-right: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 10vh;
+    background-color: var(--primary-2);
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--dark-primary-2);
+}
+
+.secondary-btn {
+    position: relative;
+    background-color: transparent;
+    color: var(--text-col-2);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    border-bottom: 0.2rem solid var(--primary-1);
+    border-radius: 0px;
+    padding: 0.15rem 0;
+}
+
+.secondary-btn::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0.2rem;
+    bottom: -0.2rem;
+    left: 0;
+    background-color: var(--light-accent-1);
+    transition: 0.3s ease-in-out;
+}
+
+.secondary-btn:hover {
+    background-color: transparent;
+}
+.secondary-btn:hover::before {
+    width: 100%;
+}
+
+/*--------------------- Showcase Image Section ---------------------*/
+.blob-container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----profile-picture----- */
+.blob-main {
+    display: flex;
+    position: absolute;
+    height: 22rem;
+    width: 22rem;
+    background-color: var(--primary-2);
+    border-radius: 48% 52% 68% 32% / 52% 62% 38% 48%;
+    transition: border-radius 500ms ease-in-out;
+}
+
+.blob-main img {
+    transition: border-radius 500ms ease-in-out;
+    border-radius: 48% 52% 68% 32% / 52% 62% 38% 48%;
+}
+
+.blob-main img:hover {
+    border-radius: 43% 57% 32% 68% / 41% 32% 68% 59%;
+}
+
+.blob-main:hover {
+    border-radius: 43% 57% 32% 68% / 41% 32% 68% 59%;
+}
+/* -------animated-blob-------- */
+.blob-animate {
+    top: 0;
+    height: 22.5rem;
+    width: 22.5rem;
+    background-color: var(--primary-4);
+    border-radius: 69% 31% 29% 71% / 56% 59% 41% 44%;
+    animation: morph 5s ease-in-out infinite;
+    transition: all 0.8s ease-in-out;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+/*--------------------- Website Body ---------------------*/
+
+.website-container {
+    height: 10000px;
+}
