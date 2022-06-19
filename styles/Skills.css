@@ -1,0 +1,94 @@
+/*--------------------- Skills Section ---------------------*/
+
+.skills {
+    overflow: hidden;
+}
+
+.skills .container {
+    padding: 4rem 2rem;
+}
+
+.skill-box {
+    background-color: white;
+    padding: 5rem 6rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.box-desc {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.skills-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    margin-top: 2rem;
+    justify-content: space-evenly;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s;
+}
+
+.skill:hover {
+    transform: scale(1.2);
+}
+
+.sk-progress {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.sk-progress svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sk-progress svg circle {
+    fill: var(--primary-5);
+    stroke-width: 5px;
+    stroke: var(--primary-3);
+    stroke-dasharray: 427;
+    stroke-dashoffset: 427;
+    stroke-linecap: round;
+}
+
+@keyframes progress {
+    to {
+        stroke-dashoffset: var(--target);
+    }
+}
+
+.counter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: black;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.counter span {
+    font-size: 2.5rem;
+}
+
+.sk-title {
+    color: var(--primary-1);
+    margin-top: 0.7rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
