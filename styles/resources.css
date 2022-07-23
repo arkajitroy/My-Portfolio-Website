@@ -26,6 +26,7 @@
 
     /*LIGHT Transparent*/
     --light-transparent-1: rgb(255, 255, 255);
+    --transparent-overlay-1: rgba(255, 255, 255, 0.334);
 
     /*LIGHT-MODE-TYPOGRAPGHY*/
     --text-col-1: #8768a7;
